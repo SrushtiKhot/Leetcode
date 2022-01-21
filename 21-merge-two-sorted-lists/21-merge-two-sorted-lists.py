@@ -25,6 +25,9 @@ class Solution:
             tail.next=list2
             
         return(dummy.next)  
+    
+    #O(n) Time complexity
+    #O(n) Sapce complexity
             
         
             
