@@ -17,6 +17,9 @@ class Solution:
             temp=nxt
             
         return(prev)
+    
+    #O(n) Time complexity
+    #O(1) Space complexity
             
         
         
