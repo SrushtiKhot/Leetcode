@@ -15,7 +15,6 @@ class Solution:
             if(slow==fast):
                 return True           
         return False
-    
     #O(n) Time complexity
     #O(1) Space complexity
         
