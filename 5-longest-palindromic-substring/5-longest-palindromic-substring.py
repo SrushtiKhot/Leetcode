@@ -21,6 +21,9 @@ class Solution:
                 r+=1
                 
         return res
+    
+    #O(n^2) Time complexity
+    #O(n) Space complexity
                 
                 
         
