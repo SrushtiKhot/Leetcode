@@ -12,6 +12,9 @@ class Solution:
                     return False
                 
         return(stack==[])
+    
+    #O(n) Time complexity
+    #O(n) Space complexity as we use stack
                 
         
         
