@@ -8,4 +8,6 @@ class Solution:
             else:
                 count[sortedword].append(words)             
         return count.values()
+    #O(m*nlogn) Time complexity
+    #O(n*k) n is length of one word in strs k is len(strs)
             
