@@ -12,8 +12,10 @@ class Solution:
             count[s[r]]=1+count.get(s[r],0)   #Get count of all chars in s 
             maxf=max(maxf,count[s[r]])
             
-            #while (r-l+1)-max(count.values())>k:#Invalid window(we donot have sufficient k to rep)
-            while((r-l+1)-maxf)>k:
+            #Invalid window(we donot have sufficient k to rep) 
+            #while (r-l+1)-max(count.values())>k:
+            #maxf is used so that we don't traverse whole dict to find max element
+            while((r-l+1)-maxf)>k: #
                 count[s[l]]-=1  #Shrink window 
                 l+=1                
             res=max(res,r-l+1)    
@@ -21,6 +23,8 @@ class Solution:
     
     #O(26 n) which equals O(n) Time complexity
     #O(1) Space complexity
+    
+    #O(n) Time complexity if maxf is used
     
     
     
