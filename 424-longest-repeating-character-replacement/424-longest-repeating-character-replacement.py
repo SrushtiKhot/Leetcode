@@ -7,12 +7,26 @@ class Solution:
         count={}          #Keep count of all chars in string
         res=0
         l=0
+        maxf=0
         for r in range(len(s)):
-            count[s[r]]=1+count.get(s[r],0)           
-            while (r-l+1)-max(count.values())>k: #Invalid window
-                count[s[l]]-=1
+            count[s[r]]=1+count.get(s[r],0)   #Get count of all chars in s 
+            maxf=max(maxf,count[s[r]])
+            
+            #while (r-l+1)-max(count.values())>k:#Invalid window(we donot have sufficient k to rep)
+            while((r-l+1)-maxf)>k:
+                count[s[l]]-=1  #Shrink window 
                 l+=1                
             res=max(res,r-l+1)    
         return res
-        
+    
+    #O(26 n) which equals O(n) Time complexity
+    #O(1) Space complexity
+    
+    
+    
+    
+    
+    
+    
+    
         
