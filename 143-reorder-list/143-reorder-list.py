@@ -42,4 +42,6 @@ class Solution:
             first.next=second                   #Make first element's next as second list's element
             second.next=temp1                   #Make second element's next as first list's element
             first,second=temp1,temp2            #To continue till end of lists
-        return head
+    
+    #O(N) N to find middle. N/2 to reverse N/2 to merge:Time complexity    
+    #O(1) Space complexity
