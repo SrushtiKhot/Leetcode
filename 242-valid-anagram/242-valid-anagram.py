@@ -12,3 +12,5 @@ class Solution:
                     
         return(max(count.values())==0)
             
+#O(n) Time complexity
+#O(1) Space complexity
