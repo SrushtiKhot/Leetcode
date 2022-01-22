@@ -13,29 +13,33 @@ class Solution:
         #2)Merge first half and reveresed second half
         
         slow=head
-        fast=head.next
-        
+        fast=head.next    
         while(fast and fast.next):
             slow=slow.next
-            fast=fast.next.next
+            fast=fast.next.next       
             
-        second=slow.next
-        
+#We reach exactly half way of the linked list at slow.The second half starts slow.next
+
+        second=slow.next 
+    
         #Reverse the second half
         prev=None
-        slow.next=None
+        slow.next=None  #Make first list's last element.next=None to indicate end of list
+        
         while(second):
             temp=second.next
             second.next=prev
             prev=second
             second=temp
             
+        #first list's head and second list's head is initialized
         first=head
-        second=prev      
+        second=prev   
+        
         #Merge first and second sorted array
-        while(second):
-            temp1,temp2=first.next,second.next
-            first.next=second
-            second.next=temp1
-            first,second=temp1,temp2    
+        while(first and second):
+            temp1,temp2=first.next,second.next #Store next elements of first and second lists
+            first.next=second                   #Make first element's next as second list's element
+            second.next=temp1                   #Make second element's next as first list's element
+            first,second=temp1,temp2            #To continue till end of lists
         return head
