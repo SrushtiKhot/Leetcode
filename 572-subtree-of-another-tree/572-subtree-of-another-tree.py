@@ -28,6 +28,9 @@ class Solution:
             return (self.sametree(s.left,t.left)) and (self.sametree(s.right,t.right))
 
         return False
+    
+    #O(n) Height of tree
+    
             
     
             
