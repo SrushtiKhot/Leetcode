@@ -14,23 +14,37 @@ class Solution:
         return (1+m)
         '''
         #BFS approach
-        
+        '''
         if not root:
             return 0
         q=collections.deque([root])
-        level=0
-        
+        level=0 
         while q:
             for i in range(len(q)):
                 node=q.popleft()
                 if(node.left):
                     q.append(node.left)
                 if(node.right):
-                    q.append(node.right)
-                    
-            level+=1
-            
+                    q.append(node.right)                  
+            level+=1            
         return level
+        '''
+        #DFS
+        if not root:
+            return 0 
+        res=0
+        q=collections.deque()
+        q.append([root,1])
+        while q:
+            for i in range(len(q)):
+                node,depth=q.pop()
+                res=max(res,depth)
+                if(node.left):
+                    q.append([node.left,depth+1])
+                if(node.right):
+                    q.append([node.right,depth+1])                  
+                    
+        return res
         
         
                 
