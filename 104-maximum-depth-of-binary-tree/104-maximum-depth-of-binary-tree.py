@@ -17,22 +17,20 @@ class Solution:
         
         if not root:
             return 0
-        q=collections.deque()
-        q.append([root,1])
-        res=0
-        #level=0 
+        q=collections.deque([root])
+        level=0
+        
         while q:
             for i in range(len(q)):
-                #node=q.popleft() 
-                node,depth=q.pop()
-                res=max(res,depth)
-                if node.left:
-                    q.append([node.left,depth+1])
-                if node.right:
-                    q.append([node.right,depth+1])
-            #level+=1
+                node=q.popleft()
+                if(node.left):
+                    q.append(node.left)
+                if(node.right):
+                    q.append(node.right)
+                    
+            level+=1
             
-        return res
+        return level
         
         
                 
