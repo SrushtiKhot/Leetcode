@@ -13,8 +13,9 @@ class Solution:
             #traversefrom top to botton
             for i in range(top,bottom):
                 res.append(matrix[i][right-1])               
-            right-=1            
-            if not (left<right and top<bottom):
+            right-=1      
+            
+            if not (left<right and top<bottom): #When top=bottom or left=right it shouldn't continue printing
                 break 
                 
             #traverse from right to left
@@ -29,7 +30,7 @@ class Solution:
         return res
     
     #O(m*n) Time complexity
-    #O(n) Space complexity
+    #O(m*n) Space complexity
             
             
             
