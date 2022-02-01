@@ -4,7 +4,7 @@ class Solution:
         visited=set()
         
         def dfs(r,c,i):
-            if(i==len(word)): #i has come to emd of word
+            if(i==len(word)): #i has come to emd of word that means we have found word 
                 return True
             
             if(r<0 or c<0 
@@ -13,12 +13,12 @@ class Solution:
               or (r,c) in visited):
                 return False
             
-            visited.add((r,c))
+            visited.add((r,c))  
             res=(dfs(r-1,c,i+1) or
                 dfs(r+1,c,i+1) or
                 dfs(r,c-1,i+1) or
                 dfs(r,c+1,i+1) )
-            visited.remove((r,c))
+            visited.remove((r,c)) #removing as the r,c shouldn't print the prev value again
                 
             return res
         
