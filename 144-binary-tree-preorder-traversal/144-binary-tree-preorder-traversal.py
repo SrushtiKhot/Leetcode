@@ -28,6 +28,8 @@ class Solution:
                 stack.append(node.left)
                 
         return res
+     #O(h) Time complexity
+     #O(h) space complexity - we have to store all nodes
 
         
         
