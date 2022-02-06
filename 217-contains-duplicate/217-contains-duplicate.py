@@ -1,7 +1,10 @@
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
+        
       #Brute force approach 
       #Time complexity O(n^2) and space complexity is O(1) as we just return True/False
+        
+        
 #         if not nums:
 #             return False
 #         for i in range(len(nums)):
@@ -23,15 +26,12 @@ class Solution:
 #         return False
 
 
-
-        #Optimal Solution using hashtable
-    
+        #Optimal Solution using hashtable T.C- O(n) S.C- O(n)
             hash={}
             for i in range(len(nums)):
                 if nums[i] in hash:
                     return True
                 hash[nums[i]]=i
-                
             return False
                 
         
