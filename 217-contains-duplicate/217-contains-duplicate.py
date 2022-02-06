@@ -13,9 +13,9 @@ class Solution:
         #One line code using set Time complexity= O(n) Space complexity O(n)
 #         return len(nums)!=len(set(nums)) 
 
-        #sort
+        #Using Sort T.C- O(nlogn) S.C- O(1)
         
-        nums=sorted(nums)
+        nums.sort()
         for i in range(len(nums)-1):
             if(nums[i]==nums[i+1]):
                 return True
