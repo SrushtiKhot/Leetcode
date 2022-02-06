@@ -11,7 +11,7 @@ class Solution:
 #         return(s==t)
 
         
-        #Using hashmap T.C- O(n) S.C= O(n)
+        #Using hashmap T.C- O(n) S.C= O(1) size of table remains the same no matter how much big n is
         
         if len(s)!=len(t):
             return False
