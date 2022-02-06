@@ -1,16 +1,28 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        count={}
-        if(len(s)!=len(t)):
+        #Using sort T.C- O(nlogn) S.C- O(n)
+        
+#         if len(s)!=len(t):
+#             return False
+        
+#         s=sorted(s)  #Strings are immutable so you cannot use sort(s)
+#         t=sorted(t)
+        
+#         return(s==t)
+
+        
+        #Using hashmap T.C- O(n) S.C= O(n)
+        
+        if len(s)!=len(t):
             return False
         
+        hash={}
         for i in s:
-            count[i]=1+count.get(i,0)
-        for j in t:
-            if j in count.keys():
-                count[j]-=1
-                    
-        return(max(count.values())==0)
+            hash[i]=1+hash.get(i,0)
             
-#O(n) Time complexity
-#O(1) Space complexity
+        for j in t:
+            if j in hash:
+                hash[j]-=1
+                
+        return(max(hash.values())==0)
+    
