@@ -15,12 +15,27 @@ class Solution:
 
         #Using Sort T.C- O(nlogn) S.C- O(1)
         
-        nums.sort()
-        for i in range(len(nums)-1):
-            if(nums[i]==nums[i+1]):
-                return True
+#         nums.sort()
+#         for i in range(len(nums)-1):
+#             if(nums[i]==nums[i+1]):
+#                 return True
             
-        return False
+#         return False
+
+
+
+        #Optimal Solution using hashtable
+    
+            hash={}
+            for i in range(len(nums)):
+                if nums[i] in hash:
+                    return True
+                hash[nums[i]]=i
+                
+            return False
+                
+        
+            
         
         
     
