@@ -10,7 +10,20 @@ class Solution:
 #                     return True 
 #         return False
 
-        return len(nums)!=len(set(nums))
+        #One line code using set Time complexity= O(n) Space complexity O(n)
+#         return len(nums)!=len(set(nums)) 
+
+        #sort
+        
+        nums=sorted(nums)
+        for i in range(len(nums)-1):
+            if(nums[i]==nums[i+1]):
+                return True
+            
+        return False
+        
+        
+    
                     
                     
                 
