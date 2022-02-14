@@ -6,7 +6,7 @@
 #         self.right = right
 class Solution:
     def isSubtree(self, s: Optional[TreeNode], t: Optional[TreeNode]) -> bool:
-        
+       
         if not t:
             return True
         if not s:
@@ -21,13 +21,13 @@ class Solution:
     def sametree(self,s,t):
         if not s and not t:
             return True
-        if not s or not t:
+        if (not s or not t) or (s.val!=t.val):
             return False
         
-        if(s.val==t.val):
-            return (self.sametree(s.left,t.left)) and (self.sametree(s.right,t.right))
+        #if(s.val==t.val):
+        return (self.sametree(s.left,t.left)) and (self.sametree(s.right,t.right))
 
-        return False
+
     
     #O(n) Height of tree
     
