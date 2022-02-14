@@ -26,9 +26,6 @@ class Solution:
         
         #if(s.val==t.val):
         return (self.sametree(s.left,t.left)) and (self.sametree(s.right,t.right))
-
-
-    
     #O(n) Height of tree
     
             
