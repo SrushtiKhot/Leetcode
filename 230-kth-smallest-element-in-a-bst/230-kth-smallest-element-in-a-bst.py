@@ -20,5 +20,41 @@ class Solution:
                 return curr.val      
             curr=curr.right
             
+            
+            
+#         res=[]
+#         def inorder(node):
+#             if not node:
+#                 return
+#             inorder(node.left)
+#             if len(res)==k:
+#                 return
+#             res.append(node.val)
+#             inorder(node.right)
+            
+#         inorder(root)
+            
+#         return res[-1]
+
+        node=root
+        stack=[]
+        while True:
+            if node:
+                stack.append(node) 
+                node=node.left
+            else:
+                node=stack.pop()
+                k-=1
+                if k==0:
+                    return node.val
+                node=node.right
+        #return node.val
+
+
+
+
+
+
+            
                 
         
