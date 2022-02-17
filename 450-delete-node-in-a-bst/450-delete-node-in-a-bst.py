@@ -44,7 +44,12 @@ class Solution:
         return root
                     
                     
+             #Time complexity O(H1)+O(H2) H1-> to search. Height form root to key
+                                        # H2-> To delete. Height from node to nodeto be deleted
                     
+                    #O(H) Height of tree
+                    
+            #Space complexity O(H) Fucntion stack
             
             
             
