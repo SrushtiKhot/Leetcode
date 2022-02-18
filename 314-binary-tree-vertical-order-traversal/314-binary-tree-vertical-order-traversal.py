@@ -20,9 +20,8 @@ class Solution:
                 q.append((node.left,hd-1))
             if node.right:
                 q.append((node.right,hd+1))          
-        d=sorted(count.items()) 
-        d1=dict(d).values()
-        for i in d1:
+        d=sorted(count.items()) #Sort dictionary on the basis of key
+        for i in dict(d).values():
             res.append(i)
         return(res)
                 
