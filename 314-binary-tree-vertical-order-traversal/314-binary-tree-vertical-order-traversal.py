@@ -15,14 +15,12 @@ class Solution:
         q.append((root,0)) #hd of root is 0
         while q:
             node,hd=q.popleft()
-            if node:
-                count[hd].append(node.val)
+            count[hd].append(node.val)
             if node.left:
                 q.append((node.left,hd-1))
             if node.right:
-                q.append((node.right,hd+1))
-                
-        d=sorted(count.items())
+                q.append((node.right,hd+1))          
+        d=sorted(count.items()) 
         d1=dict(d).values()
         for i in d1:
             res.append(i)
