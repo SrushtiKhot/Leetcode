@@ -2,7 +2,7 @@ class Solution:
     def minAddToMakeValid(self, s: str) -> int:
         bal=0
         min_add=0
-        for i in s:
+        for i in s: #O(n) Time complexity
             if i=='(':
                 bal+=1
             elif i==')' and bal>0:
@@ -11,7 +11,7 @@ class Solution:
             else:
                 min_add+=1
                 
-        return min_add+bal
+        return min_add+bal #O(1) space complexity
                 
                 
                 
