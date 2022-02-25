@@ -1,18 +1,34 @@
 class Solution:
     def minAddToMakeValid(self, s: str) -> int:
-        stack=[]
+        bal=0
         min_add=0
         for i in s:
             if i=='(':
-                stack.append(i)
-            elif i==')' and stack:
-                stack.pop()
+                bal+=1
+            elif i==')' and bal>0:
+                bal-=1
+                
             else:
                 min_add+=1
                 
-        if stack:
-            for i in stack:
-                min_add+=1
+        return min_add+bal
                 
-        return min_add
-        
+                
+                
+#         stack=[]
+#         min_add=0
+#         for i in s: #O(n)
+#             if i=='(':
+#                 stack.append(i)
+#             elif i==')' and stack:
+#                 stack.pop()
+#             else:
+#                 min_add+=1
+                
+#         if stack: #O(stack size)
+#             for i in stack:
+#                 min_add+=1
+                
+#         return min_add
+
+         
