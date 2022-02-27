@@ -9,14 +9,13 @@ class Solution:
                     a+=1
                 else:
                     return False
-                
-            
-            else:
+            else: #If digit
                 if abbr[a]=='0':
                     return False
+                
                 temp=0
                 
-                while(a<len(abbr) and abbr[a].isdigit()): 
+                while(a<len(abbr) and abbr[a].isdigit()): #Loop to calculate total number to jump
                     temp=temp*10+(int)(abbr[a])
                     a+=1
                 w+=temp
