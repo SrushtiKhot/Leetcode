@@ -2,8 +2,7 @@ class Solution:
     def validWordAbbreviation(self, word: str, abbr: str) -> bool:
         w,a=0,0
         
-        if abbr==None or word==None:
-            return False
+        
         
         while(w<len(word) and a<len(abbr)):
         #If alphabet
