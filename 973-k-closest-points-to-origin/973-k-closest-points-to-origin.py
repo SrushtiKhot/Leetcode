@@ -6,30 +6,32 @@ class Solution:
         closest=[]
         
         for p in points:
-            dist.append(self.euclidean(p))
+            dist.append(self.euclidean(p)) #[18,26,20]
             
         for p in range(len(points)):
-            remaining.append(p)
+            remaining.append(p) #[0,1,2]
             
-        low=0
-        high=max(dist)
+        low=0     #0
+        high=max(dist)  #26
             
-        while k:
-            mid=(low+high)/2
+        while k:   
+            mid=(low+high)/2   #mid=13
             
             closer,farther=self.splitlist(remaining,dist,mid)
+            #closer=[0,2]
+            #farther=[]
             if len(closer)>k:
                 high=mid
                 remaining=closer
                 
             else:
-                k-=len(closer)
-                closest.extend(closer)
+                k-=len(closer) #k=0
+                closest.extend(closer) #closest=[18,20]
                 remaining=farther
                 low=mid
                 
                 
-        return [points[i] for i in closest]
+        return [points[i] for i in closest] # 0th and 2nd element [3,3],[-2,4]
                 
        
     def euclidean(self,point):
