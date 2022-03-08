@@ -3,10 +3,12 @@ class Solution:
         #O(nlogn) because of sort function
 #         nums.sort()
 #         return(nums[len(nums)-k])
-
+        
+        #O(n)average case time complexity of quickselect. Worst case is O(n^2)
+        #n+n/2+n/4+...n/n =2n
+    
+    
         k=len(nums)-k
-
-
         return(self.quickselect(0,len(nums)-1,nums,k))
 
         #Using quick select
