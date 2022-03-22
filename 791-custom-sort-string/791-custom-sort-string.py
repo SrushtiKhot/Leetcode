@@ -13,6 +13,9 @@ class Solution:
             res.append(c*count[c])
             
         return ''.join(res)
+    
+    #O(len(order)+len(s)) as we traverse through both the strings
+    #O(len(s)) As we store counter of all the elemenets present in s
             
             
         
