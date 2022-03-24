@@ -9,3 +9,6 @@ class Solution:
         else:   
             return False
         
+        #O(n) time complexity
+        #O(n) Space complexity to store hashmap
+        
